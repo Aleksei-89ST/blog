@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
+import Link from "next/link";
 
 const Wrapper = styled.div`
   background: #eef5ff;
@@ -49,9 +50,12 @@ export default function Home() {
       <Wrapper>
         <div className="container">
           <PostWrapper>
+            <Link href={'/post/[id]'} as={`/post/test-route `}>
             <Post bgImage={"./static/images/1.png"}>
               <PostTitle>Мальдивы. Рай или пафос ?</PostTitle>
             </Post>
+            </Link>
+           
             <Post bgImage={"./static/images/2.png"}>
               <PostTitle>Италия. Остров Капри. Обзор. </PostTitle>
             </Post>
